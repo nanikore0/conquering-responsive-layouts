@@ -1,4 +1,6 @@
-@import url("cssreset.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 .hero {
   display: flex;
