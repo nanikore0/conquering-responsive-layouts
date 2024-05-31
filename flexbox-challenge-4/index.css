@@ -7,6 +7,7 @@
   --parchment: #f3eed9;
   --ironstone: #824936;
   --shark: #222c2a;
+  --white: #fff;
 }
 
 /* Layout */
@@ -42,6 +43,17 @@ h4 {
   margin: 0 auto;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+
+.col {
+  /* these are now flex items */
+  width: 100%;
+}
+
 /* Page styling */
 /* ------------ */
 
@@ -53,6 +65,16 @@ body {
 header {
   background-color: var(--parchment);
 }
+
+section {
+  padding: 4em 0;
+}
+
+img { 
+  width: 100%;
+}
+
+/* Header Hero */
 
 .hero {
   display: flex;
@@ -69,4 +91,37 @@ header {
 
 .hero > h2 {
   letter-spacing: 0.35em;
+}
+
+/* First Section */
+
+/* .first-section {
+  background-color: var(--white);
+} */
+
+.first-section__title {
+  margin: 0 auto;
+  color: var(--ironstone);
+}
+
+/* Second Section */
+
+.second-section {
+  background-color: var(--shark);
+  color: var(--white);
+}
+
+.second-section__title {
+  color: var(--parchment);
+}
+
+/* Third Section */
+
+.third-section {
+  background-color: var(--ironstone);
+  color: var(--white);
+}
+
+.third-section__title {
+  color: var(--parchment);
 }
