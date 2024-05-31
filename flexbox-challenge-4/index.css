@@ -1,12 +1,72 @@
-*, *::before, *::after {
+@import url(fonts.css);
+
+:root {
+  /* Colors */
+  /* https://colordesigner.io/color-name-finder */
+  /* Using NTC color namings */
+  --parchment: #f3eed9;
+  --ironstone: #824936;
+  --shark: #222c2a;
+}
+
+/* Layout */
+/* ------ */
+/*
+- maximum width of a "container" is 1128px
+- in the very first section try setting a min-height of 660px and using
+what we’ve covered in flexbox to center the content vertically
+*/
+
+/* General styling */
+/* --------------- */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+/* Page styling */
+/* ------------ */
+
+body {
+  margin: 0;
+  color: var(--shark);
+}
+
+header {
+  background-color: var(--parchment);
 }
 
 .hero {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+
+.hero > h1 {
+  text-align: center;
+  color: var(--ironstone);
 }
 
 .hero > h2 {
-  margin: 0;
+  letter-spacing: 0.35em;
 }
